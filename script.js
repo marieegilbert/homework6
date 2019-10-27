@@ -1,11 +1,15 @@
 $(document).ready(function(){
 
 //Display Date
-var currentDayText = moment().format("MMM Do YY");
+var currentDayText = moment().format("MMM Do YYYY");
 $("#currentDay").text("City Name " + "(" + (currentDayText) +")");
+
+//call function to fill descriptions
+displayStorage();
 
 $(".search").on("click", function(){
     var userInput = $("#searchCity").val().trim();
+    // localStorage.setItem(userInput);
 
    var queryURL = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=" + userInput + "&units=imperial&appid=1fede5b00042eb37df138bc327a6d612";
 
@@ -16,16 +20,11 @@ $(".search").on("click", function(){
     }).then(function (response){
         //console.log(response) use the response object elements to build out the info in html 
 
-  //call function to fill descriptions
-  displayStorage();
-
         //make a jquery element to display the value of the text element 
         var cityName = localStorage.getItem($("<#li>").val(response.name));
         var cityTemp = response.main.temp;
         var cityHumidity = response.main.humidity;
         var windSpeed = response.wind.speed;
-
-
 
         //Set "response values" key in localStorage
         localStorage.setItem("city", response.name);
@@ -38,9 +37,9 @@ $(".search").on("click", function(){
 
 function displayStorage() {
     var city = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-    for (var i = 0; i < cities.length; i++) {
-      var response = localStorage.getItem(city[i]);
-      $("#" + city[i]).find("textarea").val(response);
+    for (var i = 0; i < city.length; i++) {
+      var display = localStorage.getItem(city[i]);
+      $("#" + city[i]).find("#citySearch").val(display);
     }
   }
 });
