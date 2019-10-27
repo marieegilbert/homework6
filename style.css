@@ -21,3 +21,21 @@ body {
     background: #007BFF;
     color: #FFFFFF;
 }
+
+#divE1 {
+    background: red;
+}
+
+#hello {
+display: inline-block;
+float: right;
+background: red;
+width: 100%;
+}
+
+#goodbye {
+    display: inline-block;
+    float: right;
+    width: 100%;
+    background: #007BFF;
+}

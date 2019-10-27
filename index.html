@@ -16,28 +16,38 @@
     </nav>
 
     <div class="container">
-      <div class="card-columns">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Search for a City:</h5>
-            <input type="text" id="searchCity">
-            <button class="search">Search</button>
-            <i class="fas fa-search"></i>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"></li>
-                </ul>
+      <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Search for a City:</h5>
+                <input type="text" id="searchCity">
+                <button class="search">Search</button>
+                <i class="fas fa-search"></i>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" id="1"></li>
+                      <li class="list-group-item" id="2"></li>
+                      <li class="list-group-item" id="3"></li>
+                      <li class="list-group-item" id="4"></li>
+                      <li class="list-group-item" id="5"></li>
+                      <li class="list-group-item" id="6"></li>
+                      <li class="list-group-item" id="7"></li>
+                      <li class="list-group-item" id="8"></li>
+                      <li class="list-group-item" id="9"></li>
+                      <li class="list-group-item" id="10"></li>
+                    </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="card-columns">
-        <div class="card">
-          <div class="card-body">
+          <div class="col-sm-8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="city-name" id="currentDay"></h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
-    </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
